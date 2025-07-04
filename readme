@@ -1,0 +1,13 @@
+Dieses Projekt hat das Ziel, mithilfe von Natural Language Processing (NLP) Bürgerbeschwerden nach Häufigkeit zu analysieren, um den kommunalen Entscheidungsprozess bei der Priorisierung aktueller Beschwerden zu unterstützen.
+Als Datengrundlage wird der öffentlich zugängliche Datensatz „311 Service Request NYC“ genutzt. Dieser enthält aktuelle, umfangreiche und unstrukturierte Freitextbeschwerden zu verschiedenen Themen wie Infrastruktur, Lärm oder Müllentsorgung. 
+Damit ist er dem Anwendungsszenario sehr ähnlich. Der Datensatz ist auf Englisch verfügbar und über Kaggle abrufbar.
+
+In der Datenvorverarbeitung werden zunächst irrelevante Spalten entfernt. Anschließend wird der Text bereinigt, z.B. durch das Entfernen von Sonderzeichen und Stoppwörtern. Mittels spaCy erfolgt die Lemmatization, um die Texte in eine analysierbare Form zu bringen. 
+Verwendete Bibliotheken:
+pandas, numpy, spaCy.
+
+Zur Umwandlung der Texte in numerische Vektoren kommen zwei Verfahren zum Einsatz: TF-IDF, um die Bedeutung von Begriffen im Textkorpus zu gewichten und Wordembeddings, um semantische Beziehungen zwischen Begriffen zu erfassen. 
+Verwendete Bibliotheken: nltk, spaCy
+
+Für die Themenextraktion werden zwei Methoden angewendet: Eine Häufigkeitsanalyse von Stichwörtern und N-Grammen zur Identifikation gehäufter Anliegen sowie Topic Modeling mittels LatentDirichlet Allocation (LDA) um thematische Cluster zu erkennen. 
+Verwendete Bibliotheken: scikitlearn, gensim, matplotlib, seaborn.
